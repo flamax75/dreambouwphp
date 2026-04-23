@@ -101,6 +101,5 @@ if (intro && video) {
 
     video.addEventListener("ended", closeIntro);
 
-    /* respaldo para móvil por si "ended" falla */
     setTimeout(closeIntro, 6000);
 }

@@ -143,8 +143,30 @@
 <section id="contact" class="section contact">
     <div class="container">
         <h2>Contact</h2>
+
         <p>Email: <a href="mailto:dreambouw@gmail.com">dreambouw@gmail.com</a></p>
-        <p>Phone: +00 000 000 000</p>
+
+        <form action="contact-handler.php" method="POST" class="contact-form">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-row">
+                <input type="email" name="email" placeholder="Your email" required>
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="phone" placeholder="Your phone">
+            </div>
+
+            <div class="form-row">
+                <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
     </div>
 </section>
 

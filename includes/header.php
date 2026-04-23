@@ -16,10 +16,6 @@
     </div>
 
     <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo.jpg" alt="DreamBouw logo">
-        </div>
-
         <div class="menu-toggle" id="menu-toggle">
             ☰
         </div>
@@ -31,5 +27,7 @@
             <li><a href="#lgs">LGS</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="https://instagram.com/TUUSUARIO" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://facebook.com/TUUSUARIO" target="_blank" rel="noopener noreferrer">Facebook</a></li>
         </ul>
     </nav>
