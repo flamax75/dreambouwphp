@@ -31,4 +31,18 @@ class Message
 
         return $stmt->execute([$nombre, $email, $mensajeCompleto]);
     }
+    public function all(): array
+    {
+        $sql = "SELECT * FROM mensajes ORDER BY fecha DESC";
+        $stmt = $this->pdo->query($sql);
+
+        return $stmt->fetchAll();
+    }
+    public function delete(int $id): bool
+    {
+        $sql = "DELETE FROM mensajes WHERE id = ?";
+        $stmt = $this->pdo->prepare($sql);
+
+        return $stmt->execute([$id]);
+    }
 }
