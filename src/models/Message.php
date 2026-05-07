@@ -6,10 +6,10 @@ class Message
 
     public function __construct()
     {
-        $host = 'db';
-        $db   = 'dreambouw';
-        $user = 'dreamuser';
-        $pass = 'dreampass';
+        $host = getenv('DB_HOST');
+        $db   = getenv('DB_NAME');
+        $user = getenv('DB_USER');
+        $pass = getenv('DB_PASS');
 
         $this->pdo = new PDO(
             "mysql:host=$host;dbname=$db;charset=utf8mb4",
@@ -31,6 +31,7 @@ class Message
 
         return $stmt->execute([$nombre, $email, $mensajeCompleto]);
     }
+
     public function all(): array
     {
         $sql = "SELECT * FROM mensajes ORDER BY fecha DESC";
@@ -38,6 +39,7 @@ class Message
 
         return $stmt->fetchAll();
     }
+
     public function delete(int $id): bool
     {
         $sql = "DELETE FROM mensajes WHERE id = ?";
